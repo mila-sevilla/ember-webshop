@@ -1,5 +1,9 @@
 <nav>
-    <a href="/checkout"> Checkout </a>
-    <a href="./"> Homepage </a>
+  {{#link-to "checkout" class="button"}}
+  Checkout
+  {{/link-to}}
+  {{#link-to "index" class="button"}}
+  Homepage
+  {{/link-to}}
 </nav>
 <h1> Ember Web Shop </h1>

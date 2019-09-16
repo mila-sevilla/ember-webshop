@@ -1,0 +1,14 @@
+<h2> Shop Route </h2>
+
+{{#each this.model as |items|}}
+<div class="card" style="width: 18rem;">
+    <img src={{items.src}} class="card-img-top" alt={{items.name}}>
+    <div class="card-body">
+        <p class="card-text">{{items.name}}</p>
+    </div>
+</div>
+{{/each}}
+
+{{#link-to "checkout"}}
+<button type="submit" class="btn btn-success">Checkout</button>
+{{/link-to}}
