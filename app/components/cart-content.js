@@ -6,10 +6,10 @@ export default Component.extend({
 
   actions: {
     remove(item) {
-      this.cart.removeObject(item);
+      this.cart.remove(item);
     },
     add(item) {
-      this.cart.pushObject(item);
+      this.cart.push(item);
     },
     empty() {
       this.cart.clear();
