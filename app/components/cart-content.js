@@ -9,10 +9,10 @@ export default Component.extend({
       this.cart.remove(item);
     },
     add(item) {
-      this.cart.push(item);
+      this.cart.add(item);
     },
     empty() {
-      this.cart.clear();
+      this.cart.empty();
     }
   }
 });

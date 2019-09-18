@@ -3,6 +3,8 @@
     <li>
         {{item.name}}
         <button {{action "remove" item}}>Remove</button>
+        <button {{action "add" item}}>Add</button>
     </li>
     {{/each}}
+    <button {{action "empty"}}> Empty cart </button>
 </ul>
