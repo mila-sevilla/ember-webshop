@@ -1,28 +1,11 @@
 import { A } from '@ember/array';
 import Service from '@ember/service';
+import { get, set, computed } from '@ember/object';
 
 export default Service.extend({
-  items: null,
-
   init() {
     this._super(...arguments);
-    this.set('items', A([{
-      id: 'GR1',
-      name: 'Green tea',
-      price: 3.11,
-      src: '../assets/tea.png'
-    }, {
-        id: 'SR1',
-        name: 'Strawberries',
-        price: 5.00,
-        src: '../assets/strawberry.png'
-      }, {
-        id: 'CF1',
-        type: 'items',
-        name: 'Coffee',
-        price: 11.23,
-          src: '../assets/coffee.png'
-      }]));
+    this.set('items', A([]));
   },
 
   add(item) {
@@ -35,5 +18,13 @@ export default Service.extend({
 
   empty() {
     this.items.clear();
-  }
+  },
+
+  // getLength(name) {
+    // return this.items.filter(item => item.name === name).length
+  // },
+  // getLength(item) {
+  //   let itemList = this.items.filterBy(item.name);
+  //   return itemList.length 
+  // }
 });

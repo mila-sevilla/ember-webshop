@@ -2,9 +2,16 @@
     {{#each this.cart.items as |item|}}
     <li>
         {{item.name}}
-        <button {{action "remove" item}}>Remove</button>
+        {{item.price}}€
         <button {{action "add" item}}>Add</button>
+        <button {{action "remove" item}}>Remove all</button>
     </li>
     {{/each}}
     <button {{action "empty"}}> Empty cart </button>
 </ul>
+<div>
+    <h5> Summary </h5>
+    <p> Strawberries: {{item-quantity this.cart.items 'Strawberries'}} </p>
+    <p> Green tea: {{item-quantity this.cart.items 'Green tea'}} </p>
+    <p> Coffee: {{item-quantity this.cart.items 'Coffee'}} </p>
+</div>
